@@ -12,7 +12,7 @@ export default function Header() {
         alt='AirBNB Logo'
       />
       <div className='header__center'>
-        <input type='text' />
+        <input placeholder='Search for accomodations' type='text' />
         <SearchOutlined />
       </div>
       <div className='header__right'>
