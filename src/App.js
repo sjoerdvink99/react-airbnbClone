@@ -3,15 +3,24 @@ import "./App.css";
 import Home from "./Home";
 import Header from "./Header";
 import Footer from "./Footer";
-
-const tijd = "02.05.00";
+import SearchPage from "./SearchPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className='app'>
-      <Header />
-      <Home />
-      <Footer />
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/search'>
+            <SearchPage />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }
